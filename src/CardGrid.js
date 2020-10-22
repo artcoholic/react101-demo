@@ -102,12 +102,19 @@ const GifTargetDiv = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+    transition: opacity 1s ease-in-out;
     >div {
         font-size: 8px;
         padding: 2px 3px;
         border: 1px solid #333;
         background: white;
         font-weight: 600;
+        transition: opacity 150ms ease-in-out;
+    }
+    :hover {
+        >div {
+            opacity: 0;
+        }
     }
 `;
 
@@ -186,7 +193,6 @@ class ImageShot extends React.Component {
                         onMouseLeave={this.handleMouseLeave}
                     />
                 )}
-
             </ImageShotDiv>
         );
     }
